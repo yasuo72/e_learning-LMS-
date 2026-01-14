@@ -88,7 +88,7 @@ export default function LessonQuizPage({
   const allAnswered = answers.every((a) => a !== null);
 
   const score = submitted
-    ? answers.reduce((acc, answer, index) => {
+    ? answers.reduce((acc: number, answer, index) => {
         if (answer === QUESTIONS[index].correctIndex) return acc + 1;
         return acc;
       }, 0)
